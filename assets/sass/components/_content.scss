@@ -1,0 +1,116 @@
+// ------------------------------------
+// Components > Content
+// ------------------------------------
+
+.c-post {
+  margin: 0 auto;
+  padding: 0 var(--grid-margin);
+  max-width: var(--content-width);
+
+  p,
+  li {
+    letter-spacing: -0.015em;
+  }
+
+  > * + * {
+    margin-top: var(--content-flow);
+  }
+}
+
+.c-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &:empty {
+    display: none;
+  }
+
+  &--has-shadow {
+  }
+
+  > * {
+    min-width: 100%;
+  }
+
+  > * + * {
+    margin-top: var(--content-flow);
+  }
+
+  // Remove space between full-width cards
+  > .kg-width-full + .kg-width-full:not(.kg-width-full.kg-card-hascaption + .kg-width-full) {
+    margin-top: 0;
+  }
+
+  :where(p, ol, ul, blockquote) {
+    @include font($family: serif, $scale: body-copy);
+  }
+
+  :where(h1, h2, h3) {
+    font-family: var(--font-family-sansSerif);
+  }
+
+  :where(h1, h2, h3) + * {
+    margin-top: calc(var(--content-flow) / 2);
+  }
+
+  a:not([class]) {
+    @include link_underline();
+
+    color: var(--color-accent);
+  }
+
+  :where(hr) {
+    margin: var(--content-flow) 0;
+
+    + * {
+      margin-top: 0;
+    }
+  }
+
+  :is(dd, ol, ul) {
+    padding-left: var(--space-16);
+    padding-right: var(--space-16);
+  }
+
+  // Hide Ghost built-in upgrade call to action box
+  .gh-post-upgrade-cta {
+    display: none;
+    visibility: hidden
+  }
+
+  // Fade out effect for last paragraph before paywall (only when shadow class is present)
+  &--has-shadow {
+    > p:last-of-type:not(.kg-card):not(.kg-cta-card) {
+      position: relative;
+      mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
+    }
+  }
+  
+
+  > p:first-of-type::first-letter {
+    float: left;
+    margin-top: 0.1em;
+    margin-right: var(--space-4);
+    color: var(--color-secondary);
+    @include font($weight: bold);
+    font-size: 80px;
+    line-height: 0.82;
+    font-family: "Morion";
+
+    @include mq($from: tablet) {
+      font-size: 85px;
+      line-height: 0.8;
+      margin-right: var(--space-8);
+      margin-top: 0.08em;
+    }
+
+    @include mq($from: desktop) {
+      font-size: 85px;
+      line-height: 0.7;
+      margin-right: var(--space-6);
+      margin-top: 0.15em;
+    }
+  }
+}

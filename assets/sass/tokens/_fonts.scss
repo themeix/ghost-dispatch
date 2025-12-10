@@ -1,0 +1,23 @@
+// ------------------------------------
+// Tokens > Fonts
+// ------------------------------------
+
+// Work Sans - Primary Body Font
+@import url(https://fonts.bunny.net/css?family=work-sans:300,400,500,600,700);
+
+// Morion - Headline Font
+@font-face {
+  font-family: "Morion";
+  src: url('/assets/fonts/Morion/woff2/Morion Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Morion";
+  src: url('/assets/fonts/Morion/woff2/Morion Bold Italic.woff2') format('woff2');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}

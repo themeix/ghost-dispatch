@@ -1,0 +1,8 @@
+{{#if comments}}
+  <div class='c-section c-section--comments'>
+    <div class='c-section-heading'>
+      <h3 class='c-section-heading__title'>{{t 'Comments' }} {{ comment_count singular='' plural='' autowrap='span' }}</h3>
+    </div>
+    {{ comments title='' count=false }}
+  </div>
+{{/if}}

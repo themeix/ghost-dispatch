@@ -1,0 +1,17 @@
+// ------------------------------------
+// Components > Comments
+// ------------------------------------
+
+.c-section--comments {
+  margin-top: var(--space-32);
+
+  .c-section-heading {
+    margin-bottom: var(--space-24);
+  }
+
+  .c-section-heading__title {
+    @include font($family: sansSerif, $scale: 6, $weight: regular);
+    color: var(--color-text-primary);
+    text-transform: none;
+  }
+}

@@ -1,0 +1,18 @@
+// ------------------------------------
+//  Settings > Colors
+// ------------------------------------
+
+:root {
+  --color-mode: 'light';
+  --color-accent: var(--color-secondary);
+  --color-text-primary: #000000;
+  --color-text-secondary: #4E5965;
+  --color-border-primary: #000000;
+  --color-border-secondary: #D9D9D9;
+  --color-background-primary: #F6F5F2;
+  --color-secondary: #661139;
+  --color-background-secondary: var(--color-secondary);
+  --color-brand: #1C7757;
+  --color-whoweare: #C4C3C1;
+  --color-white: #FFFFFF; // New variable for white color
+}

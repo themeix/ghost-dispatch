@@ -1,0 +1,7 @@
+{{#if @custom.slugs_for_sections}}
+  {{#get 'tags' filter='slug:[{{@custom.slugs_for_sections}}]'}}
+    {{#foreach tags}}
+      {{> tag-section}}
+    {{/foreach}}
+  {{/get}}
+{{/if}}
